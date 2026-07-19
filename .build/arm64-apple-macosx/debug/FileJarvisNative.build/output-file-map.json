@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/primary.swiftdeps"
+  },
+  "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/FileJarvisApp.swift": {
+    "dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp.d",
+    "object": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp.swift.o",
+    "swiftmodule": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp.swiftdeps",
+    "diagnostics": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp.dia"
+  },
+  "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/JarvisViewModel.swift": {
+    "dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/JarvisViewModel.d",
+    "object": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/JarvisViewModel.swift.o",
+    "swiftmodule": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/JarvisViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/JarvisViewModel.swiftdeps",
+    "diagnostics": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/JarvisViewModel.dia"
+  },
+  "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/LocalFileAccess.swift": {
+    "dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/LocalFileAccess.d",
+    "object": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/LocalFileAccess.swift.o",
+    "swiftmodule": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/LocalFileAccess~partial.swiftmodule",
+    "swift-dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/LocalFileAccess.swiftdeps",
+    "diagnostics": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/LocalFileAccess.dia"
+  },
+  "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/OpenAIClient.swift": {
+    "dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/OpenAIClient.d",
+    "object": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/OpenAIClient.swift.o",
+    "swiftmodule": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/OpenAIClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/OpenAIClient.swiftdeps",
+    "diagnostics": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/OpenAIClient.dia"
+  }
+}

@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "FileJarvisNative-arm64-apple-macosx-debug.module": ["<FileJarvisNative-arm64-apple-macosx-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "file_jarvis_native-arm64-apple-macosx-debug.exe": ["<file_jarvis_native-arm64-apple-macosx-debug.exe>"]
+  "main": ["<FileJarvisNative-arm64-apple-macosx-debug.module>","<file_jarvis_native-arm64-apple-macosx-debug.exe>"]
+  "test": ["<FileJarvisNative-arm64-apple-macosx-debug.module>","<file_jarvis_native-arm64-apple-macosx-debug.exe>"]
+default: "main"
+nodes:
+  "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native":
+    is-mutated: true
+commands:
+  "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/FileJarvisApp.swift","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/JarvisViewModel.swift","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/LocalFileAccess.swift","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/OpenAIClient.swift"]
+    outputs: ["/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/sources"]
+    description: "Write auxiliary file /Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/sources"
+
+  "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native-entitlement.plist"]
+    description: "Write auxiliary file /Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native-entitlement.plist"
+
+  "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/JarvisViewModel.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/LocalFileAccess.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/OpenAIClient.swift.o"]
+    outputs: ["/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native.product/Objects.LinkFileList"
+
+  "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<FileJarvisNative-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/JarvisViewModel.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/LocalFileAccess.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/OpenAIClient.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/Modules/FileJarvisNative.swiftmodule"]
+    outputs: ["<FileJarvisNative-arm64-apple-macosx-debug.module>"]
+
+  "<file_jarvis_native-arm64-apple-macosx-debug.exe>":
+    tool: phony
+    inputs: ["<file_jarvis_native-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    outputs: ["<file_jarvis_native-arm64-apple-macosx-debug.exe>"]
+
+  "C.FileJarvisNative-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/FileJarvisApp.swift","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/JarvisViewModel.swift","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/LocalFileAccess.swift","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/OpenAIClient.swift","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/sources"]
+    outputs: ["/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/JarvisViewModel.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/LocalFileAccess.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/OpenAIClient.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/Modules/FileJarvisNative.swiftmodule"]
+    description: "Compiling Swift Module 'FileJarvisNative' (4 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","FileJarvisNative","-emit-dependencies","-emit-module","-emit-module-path","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/Modules/FileJarvisNative.swiftmodule","-output-file-map","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/output-file-map.json","-incremental","-c","@/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/sources","-I","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j11","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","FileJarvisNative_main","-color-diagnostics","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","file_jarvis"]
+
+  "C.file_jarvis_native-arm64-apple-macosx-debug.exe":
+    tool: shell
+    inputs: ["/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/JarvisViewModel.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/LocalFileAccess.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/OpenAIClient.swift.o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native.product/Objects.LinkFileList"]
+    outputs: ["/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/file_jarvis_native"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug","-o","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native","-module-name","file_jarvis_native","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_FileJarvisNative_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/Modules/FileJarvisNative.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.file_jarvis_native-arm64-apple-macosx-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native-entitlement.plist"]
+    outputs: ["<file_jarvis_native-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/file_jarvis_native"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native-entitlement.plist","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/file_jarvis_native"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Package.swift","/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
