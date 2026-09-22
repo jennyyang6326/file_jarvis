@@ -16,6 +16,7 @@ final class AppState: ObservableObject {
     let windowCoordinator: WindowCoordinator
 
     private init() {
+        AppEnvironment.loadOpenAIKeyIfNeeded()
         self.viewModel = JarvisViewModel()
         self.windowCoordinator = WindowCoordinator()
     }
@@ -91,6 +92,20 @@ final class WindowCoordinator: NSObject, NSWindowDelegate {
             return false
         }
         return true
+    }
+
+    func windowDidResignKey(_ notification: Notification) {
+        guard let window = notification.object as? NSWindow, window === mainWindow else {
+            return
+        }
+
+        DispatchQueue.main.async { [weak self, weak window] in
+            guard let self, let window, !window.isKeyWindow else { return }
+
+            // Keep the assistant visible while a folder picker or another modal panel is open.
+            guard NSApp.modalWindow == nil, window.attachedSheet == nil else { return }
+            self.hideMainWindow()
+        }
     }
 
     private func createLauncherWindow() {
@@ -345,13 +360,34 @@ struct ContentView: View {
                 Text("Conversation")
                     .sectionEyebrow()
 
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 10) {
-                        ForEach(viewModel.messages) { message in
-                            MessageBubble(message: message)
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 10) {
+                            ForEach(viewModel.messages) { message in
+                                MessageBubble(message: message)
+                            }
+
+                            if viewModel.isLoading {
+                                ThinkingBubble()
+                                    .transition(.opacity)
+                            }
+
+                            Color.clear
+                                .frame(height: 1)
+                                .id("conversation-bottom")
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    .onChange(of: viewModel.messages.count) { _ in
+                        withAnimation(.easeOut(duration: 0.2)) {
+                            proxy.scrollTo("conversation-bottom", anchor: .bottom)
                         }
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .onChange(of: viewModel.isLoading) { _ in
+                        withAnimation(.easeOut(duration: 0.2)) {
+                            proxy.scrollTo("conversation-bottom", anchor: .bottom)
+                        }
+                    }
                 }
                 .frame(minHeight: 240, idealHeight: 300, maxHeight: 340)
             }
@@ -605,6 +641,31 @@ struct MessageBubble: View {
             if message.role == .assistant {
                 Spacer(minLength: 50)
             }
+        }
+    }
+}
+
+struct ThinkingBubble: View {
+    var body: some View {
+        HStack {
+            HStack(spacing: 8) {
+                ProgressView()
+                    .controlSize(.small)
+
+                Text("Jarvis is thinking...")
+                    .font(.system(size: 13))
+                    .foregroundColor(.secondary)
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 10)
+            .background(Color(nsColor: .controlBackgroundColor))
+            .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .stroke(Color(nsColor: .separatorColor), lineWidth: 0.6)
+            )
+
+            Spacer(minLength: 50)
         }
     }
 }

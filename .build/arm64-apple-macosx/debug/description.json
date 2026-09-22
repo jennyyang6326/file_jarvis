@@ -24,6 +24,10 @@
       "inputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/AppEnvironment.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/FileJarvisApp.swift"
         },
         {
@@ -51,6 +55,7 @@
       "moduleName" : "FileJarvisNative",
       "moduleOutputPath" : "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/Modules/FileJarvisNative.swiftmodule",
       "objects" : [
+        "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/AppEnvironment.swift.o",
         "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp.swift.o",
         "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/JarvisViewModel.swift.o",
         "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/LocalFileAccess.swift.o",
@@ -77,7 +82,6 @@
         "-entry-point-function-name",
         "-Xfrontend",
         "FileJarvisNative_main",
-        "-color-diagnostics",
         "-swift-version",
         "5",
         "-plugin-path",
@@ -110,6 +114,10 @@
       "outputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/AppEnvironment.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp.swift.o"
         },
         {
@@ -131,6 +139,7 @@
       ],
       "prepareForIndexing" : false,
       "sources" : [
+        "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/AppEnvironment.swift",
         "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/FileJarvisApp.swift",
         "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/JarvisViewModel.swift",
         "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/LocalFileAccess.swift",
@@ -151,6 +160,7 @@
       "-package-name",
       "file_jarvis",
       "-c",
+      "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/AppEnvironment.swift",
       "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/FileJarvisApp.swift",
       "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/JarvisViewModel.swift",
       "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/LocalFileAccess.swift",
@@ -177,7 +187,6 @@
       "-entry-point-function-name",
       "-Xfrontend",
       "FileJarvisNative_main",
-      "-color-diagnostics",
       "-swift-version",
       "5",
       "-plugin-path",
@@ -235,6 +244,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/AppEnvironment.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/FileJarvisApp.swift"
         },
         {
@@ -272,6 +285,10 @@
         {
           "kind" : "virtual",
           "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/AppEnvironment.swift.o"
         },
         {
           "kind" : "file",

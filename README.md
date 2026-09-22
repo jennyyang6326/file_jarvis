@@ -23,13 +23,22 @@ The native MVP is intentionally narrow:
 
 ## Run the native MVP
 
-1. Set your API key:
+1. Create a local environment file:
 
 ```bash
-export OPENAI_API_KEY="your_api_key_here"
+cp .env.example .env.local
 ```
 
-2. Launch the native app:
+2. Open `.env.local` and add your OpenAI API key after the equals sign:
+
+```text
+OPENAI_API_KEY=your_api_key_here
+```
+
+The app loads `.env.local` automatically. This file is excluded from Git and must
+never be committed.
+
+3. Launch the native app:
 
 ```bash
 swift run file_jarvis_native

@@ -2,6 +2,13 @@
   "": {
     "swift-dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/primary.swiftdeps"
   },
+  "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/AppEnvironment.swift": {
+    "dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/AppEnvironment.d",
+    "object": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/AppEnvironment.swift.o",
+    "swiftmodule": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/AppEnvironment~partial.swiftmodule",
+    "swift-dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/AppEnvironment.swiftdeps",
+    "diagnostics": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/AppEnvironment.dia"
+  },
   "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/Sources/FileJarvisNative/FileJarvisApp.swift": {
     "dependencies": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp.d",
     "object": "/Users/jennyy/Desktop/Mimir/W/side_proj/file_jarvis/.build/arm64-apple-macosx/debug/FileJarvisNative.build/FileJarvisApp.swift.o",
